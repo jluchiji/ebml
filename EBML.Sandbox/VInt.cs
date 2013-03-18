@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EBML.Sandbox
 {
-    /*
+    
     /// <summary>
     /// Variable Width Integer
     /// </summary>
@@ -27,7 +27,7 @@ namespace EBML.Sandbox
         /// <param name="input">Input Stream</param>
         public VInt(Stream input)
         {
-            
+            throw new NotImplementedException();
         }
 
         public VInt(Byte[] rawData)
@@ -72,5 +72,5 @@ namespace EBML.Sandbox
 
         #endregion
     }
-     * */
+    
 }
