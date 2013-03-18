@@ -1,25 +1,23 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// EBML/EBML/BitOps.cs
+// EBML#/EBML/BitOps.cs
 // --------------------------------------------------------------------------------
 // Copyright (C) 2013, Jieni Luchijinzhou a.k.a Aragorn Wyvernzora
 // All rights reserved.
 // 
-// This file is a reimplementation of Firefly.Core.BitOperations by F.R.C
-//
-// This file is part of EBML.
+// This file is part of EBML#.
 // 
-//     EBML is free software: you can redistribute it and/or modify
+//     EBML# is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU General Public License as published by
 //     the Free Software Foundation, either version 3 of the License, or
 //     (at your option) any later version.
 // 
-//     EBML is distributed in the hope that it will be useful,
+//     EBML# is distributed in the hope that it will be useful,
 //     but WITHOUT ANY WARRANTY; without even the implied warranty of
 //     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //     GNU General Public License for more details.
 // 
 //     You should have received a copy of the GNU General Public License
-//     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+//     along with EBML#.  If not, see <http://www.gnu.org/licenses/>.
 // 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -540,6 +538,7 @@ namespace EBML
             Q = (byte) (Q & ~Convert.ToByte((1.SAL(QU - QL + 1) - 1).SAL(QL)));
             Q = (byte) (Q | Convert.ToByte(Qp.SAL(QL)));
         }
+
         /// <summary>
         ///     Overloaded.
         ///     Disassembles an integer to specified bits.
@@ -562,12 +561,13 @@ namespace EBML
             H = (byte) (H & ~Convert.ToByte((1.SAL(HU - HL + 1) - 1).SAL(HL)));
             H = (byte) (H | Convert.ToByte(Hp.SAL(HL)));
             Int32 Sp = value.SAR(TU - TL + 1) & (1.SAL(SU - SL + 1) - 1);
-            S = (byte)(S & ~Convert.ToByte((1.SAL(SU - SL + 1) - 1).SAL(SL)));
+            S = (byte) (S & ~Convert.ToByte((1.SAL(SU - SL + 1) - 1).SAL(SL)));
             S = (byte) (S | Convert.ToByte(Sp.SAL(SL)));
             Int32 Tp = value & (1.SAL(TU - TL + 1) - 1);
             T = (byte) (T & ~Convert.ToByte((1.SAL(TU - TL + 1) - 1).SAL(TL)));
             T = (byte) (T | Convert.ToByte(Tp.SAL(TL)));
         }
+
         /// <summary>
         ///     Overloaded.
         ///     Disassembles an integer to specified bits.
@@ -589,6 +589,7 @@ namespace EBML
             S = (byte) (S & ~Convert.ToByte((1.SAL(SU - SL + 1) - 1).SAL(SL)));
             S = (byte) (S | Convert.ToByte(SPart.SAL(SL)));
         }
+
         /// <summary>
         ///     Overloaded.
         ///     Disassembles an integer to specified bits.
@@ -603,6 +604,7 @@ namespace EBML
             H = (byte) (H & ~Convert.ToByte((1.SAL(HU - HL + 1) - 1).SAL(HL)));
             H = (byte) (H | Convert.ToByte(Hp.SAL(HL)));
         }
+
         /// <summary>
         ///     Overloaded.
         ///     Disassembles an integer to specified bits.
@@ -624,6 +626,7 @@ namespace EBML
             S = S & ~(1.SAL(SU - SL + 1) - 1).SAL(SL);
             S = S | Sp.SAL(SL);
         }
+
         /// <summary>
         ///     Overloaded.
         ///     Disassembles an integer to specified bits.
@@ -643,13 +646,9 @@ namespace EBML
 
         #region Bit Concateration
 
-
-
         #endregion
 
         #region Bit Split
-
-
 
         #endregion
     }
